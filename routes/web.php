@@ -31,22 +31,22 @@ Route::get('/', [FrontController::class, 'index']);
 Route::get('/artikel', [PostController::class, 'index']);
 //halaman single post
 Route::get('/artikel/{post:slug}', [PostController::class, 'show']);
+Route::get('/categories', [PostController::class, 'categories']);
 
+// Route::get('/categories', function () {
+//     return view('front.categories', [
 
-Route::get('/categories', function () {
-    return view('front.categories', [
+//         'title' => 'Post Categories',
+//         'active' => 'categories',
+//         'categories' => Category::all()
 
-        'title' => 'Post Categories',
-        'active' => 'categories',
-        'categories' => Category::all()
-
-    ]);
-});
+//     ]);
+// });
 
 Route::get('/about', function () {
     return view('front.about', [
-
         'title' => 'Tentang Kami',
+        'meta_desc' => 'Selamat datang di Teknik Rekayasa, inovasi terbaru dari mahasiswa Teknik Informatika yang berdedikasi untuk berbagi pengetahuan dan semangat pemrograman dengan Anda! Saya adalah seorang mahasiswa yang penuh semangat tentang teknologi dan saya telah menggabungkan pengetahuan untuk menciptakan sumber daya pembelajaran yang luar biasa.',
         'active' => 'about',
 
     ]);

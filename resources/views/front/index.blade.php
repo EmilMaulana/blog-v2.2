@@ -49,8 +49,8 @@
                                     <h6 class="badge bg-danger text-white">{{ $posts[0]->category->name }}</h6>
                                 </div>
                                 <div class="col ms-auto">
-                                    <small class="text-secondary">{{ $posts[0]->created_at->isoFormat('dddd, D MMMM Y') }}</small>
-                                    {{-- <small class="text-secondary"><i class="fa-solid fa-eye"></i> {{ date('jn', strtotime($posts[0]->created_at)) }} views</small> --}}
+                                    <small class="text-secondary">{{ $posts[0]->created_at->isoFormat('D MMMM Y') }} | </small>
+                                    <small class="text-secondary"><i class="fa-solid fa-eye"></i>  {{ $posts[0]->views }} views</small>
                                 </div>
                             </div>
                         </div>
@@ -69,7 +69,8 @@
                                     <div class="row">
                                         <div class="col">
                                             <h6 class="badge bg-danger text-white">{{ $post->category->name }}</h6>
-                                            <small class="text-secondary">{{ $post->created_at->isoFormat('dddd, D MMMM Y') }}</small>
+                                            <small class="text-secondary">{{ $post->created_at->isoFormat('D MMMM Y') }} | </small>
+                                            <small class="text-secondary"><i class="fa-solid fa-eye"></i>  {{ $post->views }} views</small>
                                         </div>
                                     </div>
                                 </div>

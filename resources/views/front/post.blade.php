@@ -19,12 +19,13 @@
                         <img src="{{ asset('assets/img/me.png') }}" class="img-profile" alt="" style="width: 40px">
                         <small><a href="/artikel?user={{ $post->user->name }}" class="ms-2 text-dark text-decoration-none">{{ $post->user->name }}</a></small>
                         <i class="ms-4 fas fa-clock me-2"></i><small class="text-secondary ">{{ $post->created_at->isoFormat(' D MMMM Y') }}</small> 
+                        <i class="ms-4 fa-solid fa-eye me-2"></i><small class="text-secondary ">{{ $post->views }} views</small> 
                     </p>
                     <article class="mt-4 mb-2 text-justify">
                         <p>{!! $post->body !!}</p>
                     </article>
                     <div class="input-group mt-5">
-                        <input type="text" class="form-control" readonly value="http://127.0.0.1:8000/artikel/{{ $post->slug }}" id="myInput">
+                        <input type="text" class="form-control" readonly value="https://teknikrekayasa.com/artikel/{{ $post->slug }}" id="myInput">
                         <button class="btn btn-danger" id="copyButton" data-toggle="popover" data-placement="top" data-content="Teks disalin!" onclick="copyToClipboard()">Share <i class="fa-solid fa-share-from-square"></i></button>
                     </div>
                 </div>
@@ -47,7 +48,7 @@
                                 <br>
                                 <a class="text-secondary fs-4 text-center" href="https://www.instagram.com/emilmaul_" target="_blank"><i class="fa-brands fa-instagram"></i></a>
                                 <a class="ml-3 text-secondary fs-4 text-center" href="https://www.tiktok.com/@emilmaul__" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-                                <a class="ml-3 text-secondary fs-4 text-center" href="https://emilmaulana.online" target="_blank"><i class="fa-solid fa-globe"></i></a>
+                                <a class="ml-3 text-secondary fs-4 text-center" href="https://emil-maulana.vercel.app" target="_blank"><i class="fa-solid fa-globe"></i></a>
                                 <a class="ml-3 text-secondary fs-4 text-center" href="mailto:emilmaulana10@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
                             </p>
                         </div>

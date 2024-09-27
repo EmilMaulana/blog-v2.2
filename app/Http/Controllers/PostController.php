@@ -23,8 +23,12 @@ class PostController extends Controller
             $title = ' oleh ' . $user->name;
         }
 
+        // Ambil postingan terbaru
+        $latestPost = Post::latest()->first();
+
         return view('blogs', [
             "title" => "Semua Artikel" . $title,
+            "meta_desc" => $latestPost ? $latestPost->excerpt : "Deskripsi default jika tidak ada post",
             "active" => "artikel",
             "posts" => Post::latest()->filter(request(['search', 'category', 'user']))->paginate(10)->withQueryString()
         ]);
@@ -32,16 +36,29 @@ class PostController extends Controller
 
     public function show(Post $post)
     {
-        // return $post;
-        $category = Category::latest()->get();
-
+        $post->increment('views');
+        
         return view('front.post', [
             "title" => $post->title,
+            "meta_desc" => $post->excerpt,
             "active" => "artikel",
             "post" => $post,
             "terbaru" => Post::latest()->paginate(5),
 
 
+        ]);
+    }
+
+    public function categories()
+    {
+        // Ambil postingan terbaru
+        $latestPost = Post::latest()->first();
+
+        return view('front.categories', [
+            "title" => "Post Categories",
+            "meta_desc" => $latestPost ? $latestPost->excerpt : "Deskripsi default jika tidak ada post",
+            "active" => "categories",
+            "categories" => Category::all()
         ]);
     }
 }

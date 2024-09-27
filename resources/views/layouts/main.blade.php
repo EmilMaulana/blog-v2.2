@@ -4,9 +4,9 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Kursus Laravel, Kursus PHP, Kursus VueJS, Kursus Git, Kursus Pemrograman, Kursus Koding, Kursus Membuat Web, Kursus Web Development, Training Laravel, Training PHP, Training VueJS, Training Git, Kursus Koding Karawang, Kursus Koding Cikarang, Kursus Koding Bekasi, Kursus Laravel Karawang, Kursus Laravel Cikarang, Kursus Laravel Bekasi, Kursus VueJS Karawang, Kursus VueJS Surabaya, Kursus VueJS Bekasi, Kursus Programming Karawang, Kursus Programming Surabaya, Kursus Android Karawang, Kursus Android Surabaya, Kursus Web Karawang, Kursus Web Surabaya, Kursus Web Bekasi, Kursus PHP Karawang, Kursus PHP Surabaya, Kursus PHP Bekasi, Kursus Website Karawang, Kursus Website Surabaya, Kursus Website Bekasi, Kursus Laravel Murah, Kursus PHP Murah, Kursus VueJS Murah">
+    <meta name="description" content="">
     <meta property="og:title" content="Teknik Rekayasa: inovasi terbaru dari mahasiswa Teknik Informatika">
-    <meta property="og:description" content="Inovasi terbaru dari mahasiswa Teknik Informatika yang berdedikasi untuk berbagi pengetahuan dan semangat pemrograman dengan Anda!">
+    <meta property="og:description" content="{{ $meta_desc }}">
     <meta property ="og : url" content="https://www.teknikrekayasa.com">
 
     <!-- Bootstrap CSS -->
@@ -17,6 +17,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Sans+Pro&family=Titillium+Web:wght@700&family=Varela+Round&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,7 +35,7 @@
     <title>{{ $title }}</title>
 
     {{-- icon --}}
-    <link rel="icon" href="{{ asset('assets/img/icon.png') }}" width="150px;" type="image/png">
+    <link rel="icon" href="{{ asset('assets/img/LOGO1.png') }}" width="150px;" type="image/png">
 
   </head>
 <body class="badan bg-light">
@@ -41,7 +44,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white shadow">
         <div class="container">
             <a class="" href="/">
-                <img src="{{ asset('assets/img/icon.png') }}" alt="Icon" width="45px;">
+                <img src="{{ asset('assets/img/LOGO1.png') }}" alt="Icon" width="45px;">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="navbar-toggler-icon">
                 <span class="navbar-toggler-icon"></span>
@@ -89,8 +92,8 @@
         <div class="container">
             <div class="row mt-n5">
                 <div class="col-md-6 mt-n3">
-                    <img src="{{ asset('assets/img/main-logo.png') }}" alt="" class="img-fluid ml-n4" style="width: 300px">
-                    <p class="text-dark">
+                    <img src="{{ asset('assets/img/LOGO.png') }}" alt="" class="img-fluid" style="width: 300px">
+                    <p class="text-dark mt-2">
                         Teknik Rekayasa, inovasi terbaru dari mahasiswa Teknik Informatika yang berdedikasi untuk berbagi pengetahuan dan semangat pemrograman dengan Anda!
                     </p>
                 </div>
@@ -109,7 +112,7 @@
                     <small class="">&copy Copyright <a href="https://www.instagram.com/teknikrekayasa_/" class="text-decoration-none" target="_blank">Teknik Rekayasa</a> by <a href="https://www.instagram.com/emilmaul_/" class="text-decoration-none" target="_blank">Emil Maulana</a>. All Rights Reserved</small>
                 </div>
                 <div class="col-md-6 text-end">
-                    <small>Made With <span style="color: #ff0000;"><i class="fa-solid fa-heart"></i></span> in Kawali, West Java, ID</small>
+                    <small>Made With <span style="color: #ff0000;"><i class="fa-solid fa-heart"></i></span> in Karawang, West Java, ID</small>
                 </div>
             </div>
         </div>
